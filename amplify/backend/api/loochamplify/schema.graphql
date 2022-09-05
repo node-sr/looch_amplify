@@ -1,0 +1,111 @@
+input AMPLIFY {
+  globalAuthRule: AuthRule = {allow: public}
+}
+
+input CreateUser_statusInput {
+  id: Int!
+  short_name: String!
+  description: String!
+}
+
+type User_status {
+  id: Int!
+  short_name: String!
+  description: String!
+}
+
+input UpdateUser_statusInput {
+  id: Int!
+  short_name: String
+  description: String
+}
+
+input CreateUser_typeInput {
+  id: Int!
+  short_name: String!
+  description: String!
+}
+
+type User_type {
+  id: Int!
+  short_name: String!
+  description: String!
+}
+
+input UpdateUser_typeInput {
+  id: Int!
+  short_name: String
+  description: String
+}
+
+input CreateUsersInput {
+  id: Int!
+  create_date: AWSDate
+  last_update_dt: AWSDateTime
+  email: String
+  last_login_dt: AWSDateTime
+  two_factor_id: String
+  master_user_id: Int
+  user_status_id: Int!
+  user_type_id: Int!
+  cognito_id: String
+}
+
+type Users {
+  id: Int!
+  create_date: AWSDate
+  last_update_dt: AWSDateTime
+  email: String
+  last_login_dt: AWSDateTime
+  two_factor_id: String
+  master_user_id: Int
+  user_status_id: Int!
+  user_type_id: Int!
+  cognito_id: String
+}
+
+input UpdateUsersInput {
+  id: Int!
+  create_date: AWSDate
+  last_update_dt: AWSDateTime
+  email: String
+  last_login_dt: AWSDateTime
+  two_factor_id: String
+  master_user_id: Int
+  user_status_id: Int
+  user_type_id: Int
+  cognito_id: String
+}
+
+type Mutation {
+  deleteUser_status(id: Int!): User_status
+  createUser_status(createUser_statusInput: CreateUser_statusInput!): User_status
+  updateUser_status(updateUser_statusInput: UpdateUser_statusInput!): User_status
+  deleteUser_type(id: Int!): User_type
+  createUser_type(createUser_typeInput: CreateUser_typeInput!): User_type
+  updateUser_type(updateUser_typeInput: UpdateUser_typeInput!): User_type
+  deleteUsers(id: Int!): Users
+  createUsers(createUsersInput: CreateUsersInput!): Users
+  updateUsers(updateUsersInput: UpdateUsersInput!): Users
+}
+
+type Query {
+  getUser_status(id: Int!): User_status
+  listUser_statuss: [User_status]
+  getUser_type(id: Int!): User_type
+  listUser_types: [User_type]
+  getUsers(id: Int!): Users
+  listUserss: [Users]
+}
+
+type Subscription {
+  onCreateUser_status: User_status @aws_subscribe(mutations: ["createUser_status"])
+  onCreateUser_type: User_type @aws_subscribe(mutations: ["createUser_type"])
+  onCreateUsers: Users @aws_subscribe(mutations: ["createUsers"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

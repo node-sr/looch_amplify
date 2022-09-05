@@ -1,0 +1,71 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-loochamplify-dev-103447-authRole",
+      "UnauthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-dev-103447-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-dev-103447-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-loochamplify-dev-103447-deployment",
+      "UnauthRoleName": "amplify-loochamplify-dev-103447-unauthRole",
+      "StackName": "amplify-loochamplify-dev-103447",
+      "StackId": "arn:aws:cloudformation:us-east-1:175186839754:stack/amplify-loochamplify-dev-103447/f92f97b0-2cd7-11ed-a70e-12a2d990fc6b",
+      "AmplifyAppId": "d1a5wsbuwz3764"
+    },
+    "categories": {
+      "api": {
+        "loochamplify": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:175186839754:cluster:looch-aurora-cluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:175186839754:secret:rds-db-credentials/cluster-DNMCJPR6K3NUJH2XTB7AFMMZKA-60wecl",
+          "rdsDatabaseName": "looch"
+        }
+      }
+    }
+  },
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-loochamplify-prod-103614-authRole",
+      "UnauthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-prod-103614-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-prod-103614-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-loochamplify-prod-103614-deployment",
+      "UnauthRoleName": "amplify-loochamplify-prod-103614-unauthRole",
+      "StackName": "amplify-loochamplify-prod-103614",
+      "StackId": "arn:aws:cloudformation:us-east-1:175186839754:stack/amplify-loochamplify-prod-103614/2cb80950-2cd8-11ed-98fb-12a6ffeb9497",
+      "AmplifyAppId": "d1a5wsbuwz3764"
+    },
+    "categories": {
+      "api": {
+        "loochamplify": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:175186839754:cluster:looch-aurora-cluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:175186839754:secret:rds-db-credentials/cluster-DNMCJPR6K3NUJH2XTB7AFMMZKA-60wecl",
+          "rdsDatabaseName": "looch"
+        }
+      }
+    }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-loochamplify-test-105633-authRole",
+      "UnauthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-test-105633-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::175186839754:role/amplify-loochamplify-test-105633-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-loochamplify-test-105633-deployment",
+      "UnauthRoleName": "amplify-loochamplify-test-105633-unauthRole",
+      "StackName": "amplify-loochamplify-test-105633",
+      "StackId": "arn:aws:cloudformation:us-east-1:175186839754:stack/amplify-loochamplify-test-105633/03b559b0-2cdb-11ed-a38b-0e8abe1bfeef",
+      "AmplifyAppId": "d1a5wsbuwz3764"
+    },
+    "categories": {
+      "api": {
+        "loochamplify": {
+          "rdsRegion": "us-east-1",
+          "rdsClusterIdentifier": "arn:aws:rds:us-east-1:175186839754:cluster:looch-aurora-cluster",
+          "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:175186839754:secret:rds-db-credentials/cluster-DNMCJPR6K3NUJH2XTB7AFMMZKA-60wecl",
+          "rdsDatabaseName": "looch"
+        }
+      }
+    }
+  }
+}
